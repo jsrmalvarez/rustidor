@@ -9,3 +9,10 @@ init.cfg
 restore.cfg
 servers.cfg
 *.gch
+*.o
+*.a
+*.d
+**/target/*
+data
+packages
+Cargo.lock
