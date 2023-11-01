@@ -1,6 +1,6 @@
 # Rust Sauerbraten Port
 
-This project is a Rust port of the dwclassic game Sauerbraten. The main purpose of this project is to serve as a learning platform for Rust enthusiasts, including myself, and potentially assist others in their Rust learning journey.
+This project is a Rust port of the classic game Sauerbraten. The main purpose of this project is to serve as a learning platform for Rust enthusiasts, including myself, and potentially assist others in their Rust learning journey.
 
 ## About Sauerbraten
 
