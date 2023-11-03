@@ -1,4 +1,5 @@
 // weapon.cpp: all shooting and effects code, projectile management
+#include "rust_port.h"
 #include "game.h"
 
 namespace game
@@ -46,10 +47,7 @@ namespace game
 
     int getweapon(const char *name)
     {
-        const char *abbrevs[] = { "FI", "SG", "CG", "RL", "RI", "GL", "PI" };
-        if(isdigit(name[0])) return parseint(name);
-        else loopi(sizeof(abbrevs)/sizeof(abbrevs[0])) if(!strcasecmp(abbrevs[i], name)) return i;
-        return -1;
+        return rstd_getweapon(name);
     }
 
     void setweapon(const char *name, bool force = false)

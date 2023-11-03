@@ -4,7 +4,7 @@ override CXXFLAGS+= -Wall -fsigned-char -fno-exceptions -fno-rtti
 PLATFORM= $(shell uname -s | tr '[:lower:]' '[:upper:]')
 PLATFORM_PREFIX= native
 
-INCLUDES= -Ishared -Iengine -Ifpsgame -Ienet/include
+INCLUDES= -Ishared -Iengine -Ifpsgame -Ienet/include -Irust_port/include
 
 STRIP=
 ifeq (,$(findstring -g,$(CXXFLAGS)))
@@ -76,6 +76,7 @@ ifneq (,$(findstring GNU,$(PLATFORM)))
 CLIENT_LIBS+= -lrt
 endif
 endif
+CLIENT_LIBS+= -L rust_port/target/release -lrust_port_lib
 CLIENT_OBJS= \
 	shared/crypto.o \
 	shared/geom.o \
