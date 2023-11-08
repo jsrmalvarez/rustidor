@@ -2,6 +2,7 @@ use std::os::raw::c_char;
 use std::ffi::CStr;
 use crate::vec::CVec;
 
+// This is needed for vec functions to be included in the library!
 mod vec;
 
 /// # Safety
