@@ -3,7 +3,8 @@
 
 extern "C" {
 
-int rstd_getweapon(const char* c_char);
+int  rstd_getweapon(const char* c_char);
+bool rstd_iszero(const void* v);
 
 }
 #endif//RUSTIDOR

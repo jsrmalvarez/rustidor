@@ -1,5 +1,8 @@
 use std::os::raw::c_char;
 use std::ffi::CStr;
+use crate::vec::CVec;
+
+mod vec;
 
 /// # Safety
 #[no_mangle]

@@ -1,3 +1,5 @@
+#include "rust_port.h"
+
 struct vec;
 struct vec4;
 
@@ -96,7 +98,7 @@ struct vec
     bool operator==(const vec &o) const { return x == o.x && y == o.y && z == o.z; }
     bool operator!=(const vec &o) const { return x != o.x || y != o.y || z != o.z; }
 
-    bool iszero() const { return x==0 && y==0 && z==0; }
+    bool iszero() const { return rstd_iszero(this); }
     float squaredlen() const { return x*x + y*y + z*z; }
     template<class T> float dot2(const T &o) const { return x*o.x + y*o.y; }
     float dot(const vec &o) const { return x*o.x + y*o.y + z*o.z; }
